@@ -7,3 +7,8 @@ pandas-profiling==3.6.3
 rdkit==2023.09.3
 scikit-learn
 xgboost
+ptitprince
+plotly
+molplotly
+featuretools
+umap-learn
