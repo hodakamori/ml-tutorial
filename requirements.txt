@@ -14,3 +14,4 @@ featuretools
 umap-learn
 tensorflow
 pubchempy
+pycaret
