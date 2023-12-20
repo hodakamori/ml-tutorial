@@ -12,3 +12,5 @@ plotly
 molplotly
 featuretools
 umap-learn
+tensorflow
+pubchempy
