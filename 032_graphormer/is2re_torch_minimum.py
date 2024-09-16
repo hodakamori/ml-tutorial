@@ -27,7 +27,7 @@ model = Graphormer3D.build_model(
     args=args
 )
 
-lmdb_dataset = LMDBDataset(db_path="/mnt/c/Users/hodak/ubuntu/is2re/all/test_id/data.lmdb")
+lmdb_dataset = LMDBDataset(db_path="data.lmdb")
 pbc_dataset = PBCDataset(lmdb_dataset)
 
 atoms = AtomDataset(pbc_dataset, "atoms")
