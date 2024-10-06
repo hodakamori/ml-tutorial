@@ -1,0 +1,1 @@
+Data was taken from https://github.com/tsudalab/Polymer-degradability-ranking
