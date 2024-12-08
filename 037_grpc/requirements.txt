@@ -1,4 +1,0 @@
-streamlit
-grpcio
-grpcio-tools
-protobuf
