@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output peo10_10.pdb
+
+structure peo10.pdb
+   number 10
+   inside box 0 0 0 50 50 50
+end structure
