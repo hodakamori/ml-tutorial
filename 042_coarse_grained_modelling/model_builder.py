@@ -257,6 +257,7 @@ class CGModelBuilder:
     def create_packed_model(
         self,
         structures: List[Dict],
+        box_size: Tuple[float, float, float],
         output_pdb: str = "mixture.pdb",
     ) -> Tuple[app.Topology, List[Vec3]]:
         packmol_input = self._build_packmol_input(structures, output_pdb)
@@ -284,11 +285,14 @@ class CGModelBuilder:
         positions_nm = []
         for pos in positions_angs:
             # Å -> nm
-            x_nm = pos.x * 0.1
-            y_nm = pos.y * 0.1
-            z_nm = pos.z * 0.1
+            x_nm = pos.x
+            y_nm = pos.y
+            z_nm = pos.z
             positions_nm.append(Vec3(x_nm, y_nm, z_nm))
-
+        lx_nm = box_size[0]
+        ly_nm = box_size[1]
+        lz_nm = box_size[2]
+        topology.setUnitCellDimensions((lx_nm, ly_nm, lz_nm))
         return topology, positions_nm
 
     def _build_packmol_input(self, structures: List[Dict], output_pdb: str) -> str:
@@ -391,5 +395,11 @@ class CGModelBuilder:
                 new_atom1 = atom_mapping[(rep_id, old1)]
                 new_atom2 = atom_mapping[(rep_id, old2)]
                 new_topology.addBond(new_atom1, new_atom2)
+        replicate_box_x = nx * box_size_x
+        replicate_box_y = ny * box_size_y
+        replicate_box_z = nz * box_size_z
+        new_topology.setUnitCellDimensions(
+            (replicate_box_x, replicate_box_y, replicate_box_z)
+        )
 
         return new_topology, new_positions

@@ -1,3 +1,4 @@
+import math
 from collections import defaultdict
 from typing import Any, Dict, List, Tuple
 
@@ -18,6 +19,7 @@ class CGForceField:
         system = openmm.System()
         atoms = list(topology.atoms())
 
+        # -- Forces
         bond_force = openmm.HarmonicBondForce()
         system.addForce(bond_force)
 
@@ -30,24 +32,26 @@ class CGForceField:
         nonbonded_force = openmm.NonbondedForce()
         system.addForce(nonbonded_force)
 
+        # 1) nonbond params: mass, LJ, charge
         nonbonded_params = self.param_dict.get("NONBONDED", {})
         for i, atom in enumerate(atoms):
             res_label = atom.residue.name
             nb_data = nonbonded_params[res_label]
-            mass_value = nb_data["mass"]
-            mass_amu = mass_value * unit.amu
-            system.addParticle(mass_amu)
-
+            mass_value = nb_data["mass"]  # amu
             sigma_nm = nb_data["sigma"]  # nm
             epsilon_kj = nb_data["epsilon"]  # kJ/mol
-            charge_e = nb_data["charge"]  # elementary charge
+            charge_e = nb_data["charge"]  # e
 
+            # mass
+            system.addParticle(mass_value * unit.amu)
+            # nonbond (LJ + coulomb)
             nonbonded_force.addParticle(
                 charge_e,
                 sigma_nm * unit.nanometer,
                 epsilon_kj * unit.kilojoule_per_mole,
             )
 
+        # 2) BondForce
         bond_params = self.param_dict.get("BOND", {})
         for bond in topology.bonds():
             atom1, atom2 = bond
@@ -64,13 +68,11 @@ class CGForceField:
                 bp = bond_params[key1]
             elif key2 in bond_params:
                 bp = bond_params[key2]
-
-            if bp is not None:
-                r0 = bp["r0"]  # nm
-                k_val = bp["k"]  # kJ/mol/nm^2
             else:
                 raise ValueError(f"Unknown bond: {label1}-{label2}")
 
+            r0 = bp["r0"]  # nm
+            k_val = bp["k"]  # kJ/(mol·nm^2)
             bond_force.addBond(
                 i1,
                 i2,
@@ -78,62 +80,53 @@ class CGForceField:
                 k_val * unit.kilojoule_per_mole / (unit.nanometer**2),
             )
 
-        # -------------------
-        # 4) Add angle or torsion force (if present)
-        # -------------------
-        # --- 3) AngleForce (自動生成された angles を参照)
-        # param_dict["ANGLE"] は { (resA, resB, resC): {"theta0":..., "k":...}, ... }
+        # 3) AngleForce
         angle_params = self.param_dict.get("ANGLE", {})
+        angles = self._get_angles(topology)  # (i,j,k)
 
-        angles = self._get_angles(topology)  # List[(i,j,k)]
-
-        # atoms[i].residue.name, ...
         for i, j, k in angles:
             resA = atoms[i].residue.name
             resB = atoms[j].residue.name
             resC = atoms[k].residue.name
 
             key1 = (resA, resB, resC)
-            key2 = None
-            # もし対称を考えるなら別の書き換え (ここではあえてkey2は使わない)
-
-            ap = None
             if key1 in angle_params:
                 ap = angle_params[key1]
-            # elif key2 in angle_params:
-            #    ap = angle_params[key2]
-            if ap is not None:
-                theta0 = ap["theta0"]  # rad
-                k_ang = ap["k"]  # kJ/(mol * rad^2)
+                theta0_deg = ap["theta0"]  # in degrees
+                k_deg = ap["k"]  # kJ/(mol·deg^2)
+
+                # angle: deg -> rad
+                theta0_rad = theta0_deg * (math.pi / 180.0)
+                # force constant: k_deg -> k_rad
+                # k_in_rad = k_in_deg * ( (180/pi) ** 2 )
+                factor_deg2_to_rad2 = (180.0 / math.pi) ** 2
+                k_rad = k_deg * factor_deg2_to_rad2
+
                 angle_force.addAngle(
                     i,
                     j,
                     k,
-                    theta0 * unit.radian,  # or unit.degrees if you prefer
-                    k_ang * unit.kilojoule_per_mole / (unit.radian**2),
+                    theta0_rad * unit.radian,
+                    k_rad * unit.kilojoule_per_mole / (unit.radian**2),
                 )
 
-        # --- 4) TorsionForce (自動生成された torsions を参照)
-        # param_dict["TORSION"] は { (resA,resB,resC,resD): {"periodicity":..., "phase":..., "k":...}, ...}
         torsion_params = self.param_dict.get("TORSION", {})
+        tors_list = self._get_torsions(topology)
 
-        tors = self._get_torsions(topology)
-        for i, j, k, l in tors:
+        for i, j, k, l in tors_list:
             resA = atoms[i].residue.name
             resB = atoms[j].residue.name
             resC = atoms[k].residue.name
             resD = atoms[l].residue.name
 
             key1 = (resA, resB, resC, resD)
-            tp = None
             if key1 in torsion_params:
                 tp = torsion_params[key1]
-            # elif ... (if you want symmetrical checks)
-
-            if tp is not None:
                 periodicity = tp["periodicity"]
-                phase = tp["phase"]  # rad
+                phase_deg = tp["phase"]  # degree
                 k_tor = tp["k"]  # kJ/mol
+
+                phase_rad = phase_deg * (math.pi / 180.0)
 
                 torsion_force.addTorsion(
                     i,
@@ -141,21 +134,31 @@ class CGForceField:
                     k,
                     l,
                     periodicity,
-                    phase * unit.radian,
+                    phase_rad * unit.radian,
                     k_tor * unit.kilojoule_per_mole,
                 )
 
-        # -------------------
-        # 5) Set nonbonded interaction
-        # -------------------
-        nonbonded_force.setNonbondedMethod(openmm.NonbondedForce.NoCutoff)
+        # 5) nonbonded method
+        nonbonded_force.setNonbondedMethod(openmm.NonbondedForce.CutoffPeriodic)
+        nonbonded_force.setCutoffDistance(1.4)
+
+        # 6) set PBC
+        box_dims = topology.getUnitCellDimensions()
+        if box_dims is not None:
+            lx, ly, lz = box_dims
+            system.setDefaultPeriodicBoxVectors(
+                openmm.Vec3(lx, 0, 0) * unit.nanometer,
+                openmm.Vec3(0, ly, 0) * unit.nanometer,
+                openmm.Vec3(0, 0, lz) * unit.nanometer,
+            )
+            system.usesPeriodicBoundaryConditions = True
 
         return system
 
     def _build_adjacency_list(self, topology: app.Topology) -> Dict[int, set]:
         adjacency = defaultdict(set)
         for bond in topology.bonds():
-            a1, a2 = bond  # app.TopologyAtom
+            a1, a2 = bond
             i1 = a1.index
             i2 = a2.index
             adjacency[i1].add(i2)
@@ -177,10 +180,8 @@ class CGForceField:
     def _get_torsions(self, topology: app.Topology) -> List[Tuple[int, int, int, int]]:
         adjacency = self._build_adjacency_list(topology)
         angles = self._get_angles(topology)  # (i, j, k)
-
         torsions = []
         for i, j, k in angles:
-            # k の隣接を見る
             for l in adjacency[k]:
                 if l > k and l not in (i, j):
                     torsions.append((i, j, k, l))
