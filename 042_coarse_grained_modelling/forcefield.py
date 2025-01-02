@@ -1,4 +1,3 @@
-import math
 from collections import defaultdict
 from typing import Any, Dict, List, Tuple
 
@@ -50,6 +49,39 @@ class CGForceField:
                 sigma_nm * unit.nanometer,
                 epsilon_kj * unit.kilojoule_per_mole,
             )
+            adjacency = defaultdict(set)
+
+            # bond一覧を取得
+            bond_list = list(topology.bonds())
+            # adjacency list
+            for bond in bond_list:
+                a1, a2 = bond
+                i1 = a1.index
+                i2 = a2.index
+                adjacency[i1].add(i2)
+                adjacency[i2].add(i1)
+
+            # 1-2: 完全除外
+            for atom1, atom2 in bond_list:
+                i1, i2 = atom1.index, atom2.index
+                # addException( p1, p2, chargeProd, sigma, epsilon, replace=False )
+                # 完全除外 => chargeProd=0.0, epsilon=0.0
+                nonbonded_force.addException(i1, i2, 0.0, 1.0, 0.0, replace=True)
+
+            angle_list = []
+            for j in adjacency:
+                neigh = list(adjacency[j])
+                for i in neigh:
+                    if i < j:
+                        for k in neigh:
+                            if k > j and k != i:
+                                angle_list.append((i, j, k))
+                                # 1-3 => exclude
+                                nonbonded_force.addException(
+                                    i, k, 0.0, 1.0, 0.0, replace=True
+                                )
+        nonbonded_force.setNonbondedMethod(openmm.NonbondedForce.CutoffPeriodic)
+        nonbonded_force.setCutoffDistance(1.1)
 
         # 2) BondForce
         bond_params = self.param_dict.get("BOND", {})
@@ -79,8 +111,8 @@ class CGForceField:
                 r0 * unit.nanometer,
                 k_val * unit.kilojoule_per_mole / (unit.nanometer**2),
             )
+            # system.addConstraint(i1, i2, r0 * unit.nanometer)
 
-        # 3) AngleForce
         angle_params = self.param_dict.get("ANGLE", {})
         angles = self._get_angles(topology)  # (i,j,k)
 
@@ -92,15 +124,8 @@ class CGForceField:
             key1 = (resA, resB, resC)
             if key1 in angle_params:
                 ap = angle_params[key1]
-                theta0_deg = ap["theta0"]  # in degrees
-                k_deg = ap["k"]  # kJ/(mol·deg^2)
-
-                # angle: deg -> rad
-                theta0_rad = theta0_deg * (math.pi / 180.0)
-                # force constant: k_deg -> k_rad
-                # k_in_rad = k_in_deg * ( (180/pi) ** 2 )
-                factor_deg2_to_rad2 = (180.0 / math.pi) ** 2
-                k_rad = k_deg * factor_deg2_to_rad2
+                theta0_rad = ap["theta0"]
+                k_rad = ap["k"]
 
                 angle_force.addAngle(
                     i,
@@ -123,10 +148,8 @@ class CGForceField:
             if key1 in torsion_params:
                 tp = torsion_params[key1]
                 periodicity = tp["periodicity"]
-                phase_deg = tp["phase"]  # degree
+                phase_rad = tp["phase"]  # already in rad
                 k_tor = tp["k"]  # kJ/mol
-
-                phase_rad = phase_deg * (math.pi / 180.0)
 
                 torsion_force.addTorsion(
                     i,
@@ -137,10 +160,6 @@ class CGForceField:
                     phase_rad * unit.radian,
                     k_tor * unit.kilojoule_per_mole,
                 )
-
-        # 5) nonbonded method
-        nonbonded_force.setNonbondedMethod(openmm.NonbondedForce.CutoffPeriodic)
-        nonbonded_force.setCutoffDistance(1.4)
 
         # 6) set PBC
         box_dims = topology.getUnitCellDimensions()

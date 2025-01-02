@@ -161,8 +161,10 @@ class CGModelBuilder:
     packmol_path: str = "packmol"
 
     def create_molecule(self) -> Tuple[app.Topology, List[openmm.Vec3]]:
+        # (1) parse SMILES -> nodes
         root = parse_smileslike(self.smiles_sequence)
 
+        # (2) create Topology + bond list
         topology = app.Topology()
         chain = topology.addChain()
         atom_list = []
@@ -177,6 +179,7 @@ class CGModelBuilder:
                 atom_list.append(new_atom)
                 node.atom_index = my_idx
 
+                # 親 -> this
                 if parent_idx is not None:
                     bonds.append((parent_idx, my_idx))
                 current_parent = my_idx
@@ -185,67 +188,102 @@ class CGModelBuilder:
 
             for child in node.children:
                 traverse_create_atoms(child, current_parent)
-
             if node.next_sibling:
                 traverse_create_atoms(node.next_sibling, current_parent)
 
         for c in root.children:
             traverse_create_atoms(c, None)
 
+        # bond to topology
         for i1, i2 in bonds:
             topology.addBond(atom_list[i1], atom_list[i2])
 
-        positions = [openmm.Vec3(0, 0, 0) for _ in range(len(atom_list))]
+        # (3) positions を Noneで初期化 (まだ配置していない)
+        positions: List[Optional[openmm.Vec3]] = [None] * len(atom_list)
 
         def traverse_assign_positions(node: SmilesNode, parent_idx: Optional[int]):
             if node.label is not None:
                 my_idx = node.atom_index
-                if parent_idx is None:
-                    positions[my_idx] = openmm.Vec3(0.0, 0.0, 0.0)
-                else:
-                    parent_pos = positions[parent_idx]
-                    candidate = self._find_random_position(parent_pos, positions)
-                    positions[my_idx] = candidate
 
+                if parent_idx is None:
+                    # ルート => 原点
+                    candidate = openmm.Vec3(0, 0, 0)
+                else:
+                    parent_pos = positions[parent_idx]  # type: ignore
+                    candidate = self._find_random_position(
+                        my_idx, parent_idx, parent_pos, positions
+                    )
+
+                positions[my_idx] = candidate
                 current_parent = my_idx
             else:
                 current_parent = parent_idx
 
             for child in node.children:
                 traverse_assign_positions(child, current_parent)
-
             if node.next_sibling:
                 traverse_assign_positions(node.next_sibling, current_parent)
 
         for c in root.children:
             traverse_assign_positions(c, None)
 
-        return topology, positions
+        # 最終的に全て None→Vec3(0,0,0)に置き換える or cast
+        final_positions: List[openmm.Vec3] = []
+        for p in positions:
+            if p is None:
+                final_positions.append(openmm.Vec3(0, 0, 0))
+            else:
+                final_positions.append(p)
+
+        return topology, final_positions
 
     def _find_random_position(
-        self, parent_pos: openmm.Vec3, positions: List[openmm.Vec3]
+        self,
+        my_idx: int,
+        parent_idx: int,
+        parent_pos: openmm.Vec3,
+        positions: List[Optional[openmm.Vec3]],
     ) -> openmm.Vec3:
+        """
+        親(parent_idx)から bond_length 離れたランダム方向に配置。
+        - 親ビーズや自分自身は衝突判定スキップ
+        - 他ビーズは dist >= min_dist
+        """
         for _ in range(self.max_tries):
-            direction = self._random_3d_unit_vector()  # unit vector
+            direction = self._random_3d_unit_vector()
             candidate = parent_pos + direction * self.bond_length
-            if not self._too_close(candidate, positions):
+
+            if not self._too_close(
+                candidate,
+                positions,
+                ignore_parent_idx=parent_idx,
+                ignore_self_idx=my_idx,
+            ):
                 return candidate
+
         raise RuntimeError("Could not find valid random position (max_tries exceeded).")
 
-    def _random_3d_unit_vector(self) -> openmm.Vec3:
-        u = random.random()  # 0..1
-        v = random.random()  # 0..1
-        theta = math.acos(1.0 - 2.0 * u)  # [0, π]
-        phi = 2.0 * math.pi * v  # [0, 2π)
+    def _too_close(
+        self,
+        candidate: openmm.Vec3,
+        positions: List[Optional[openmm.Vec3]],
+        ignore_parent_idx: int,
+        ignore_self_idx: int,
+    ) -> bool:
+        """
+        candidate と既存ビーズとの距離 < min_dist -> True
+        - 親ビーズ (ignore_parent_idx) と
+        - 今まさに配置中のビーズ (ignore_self_idx)
+        は衝突判定しない
+        """
+        for idx, p in enumerate(positions):
+            if p is None:
+                continue
+            if idx == ignore_parent_idx:
+                continue
+            if idx == ignore_self_idx:
+                continue
 
-        sin_t = math.sin(theta)
-        x = sin_t * math.cos(phi)
-        y = sin_t * math.sin(phi)
-        z = math.cos(theta)
-        return openmm.Vec3(x, y, z)
-
-    def _too_close(self, candidate: openmm.Vec3, positions: List[openmm.Vec3]) -> bool:
-        for p in positions:
             dx = candidate.x - p.x
             dy = candidate.y - p.y
             dz = candidate.z - p.z
@@ -253,6 +291,17 @@ class CGModelBuilder:
             if dist_sq < (self.min_dist * self.min_dist):
                 return True
         return False
+
+    def _random_3d_unit_vector(self) -> openmm.Vec3:
+        u = random.random()
+        v = random.random()
+        theta = math.acos(1.0 - 2.0 * u)
+        phi = 2.0 * math.pi * v
+        sin_t = math.sin(theta)
+        x = sin_t * math.cos(phi)
+        y = sin_t * math.sin(phi)
+        z = math.cos(theta)
+        return openmm.Vec3(x, y, z)
 
     def create_packed_model(
         self,
