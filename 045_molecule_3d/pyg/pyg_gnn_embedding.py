@@ -5,7 +5,8 @@ from torch_geometric.datasets import QM9
 from torch_geometric.nn.models import SchNet, DimeNet, DimeNetPlusPlus
 from torch_geometric.nn import radius_graph, global_add_pool, global_mean_pool
 from typing import Literal
-
+import pandas as pd
+import pickle as pk
 # -------------------------------------------------
 # Utility
 # -------------------------------------------------
@@ -152,12 +153,23 @@ if __name__ == "__main__":
     root_qm9 = "./data/QM9"
     dataset = QM9(root_qm9)
     data = smiles_to_data("CC(=O)O")
-
-    sne = SchNetEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool="mean")
-    print("SchNet h0:", sne(data).shape)
-
-    dne = DimeNetEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool="mean")
-    print("DimeNet pooled:", dne(data).shape)
-
-    dpp = DimeNetPPEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool="mean")
-    print("DimeNet++ pooled:", dpp(data).shape)
+    df = pd.read_csv("../freesolv.csv")
+    pool = "mean"
+    for index, smiles in zip(df["# compound id (and file prefix)"], df[" SMILES"]):
+        data = smiles_to_data(smiles)
+        result = {
+            "smiles": smiles,
+            "data": data,
+            "emb":{},
+            "pool":pool
+        }
+        sne = SchNetEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool=pool)
+        dne = DimeNetEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool=pool)
+        dpp = DimeNetPPEmbeddingExtractor.from_qm9_pretrained(root_qm9, dataset, 7, pool=pool)
+        result["emb"]["schnet"] = sne(data)
+        result["emb"]["dimenet"] = dne(data)
+        result["emb"]["dimenetpp"] = dpp(data)
+        with open(f"{index}.pkl", "wb") as f:
+            pk.dump(result, f)
+        print(f"Saved {index}.pkl")
+        # print(f"{index}.pkl")
