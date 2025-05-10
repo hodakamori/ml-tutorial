@@ -1,0 +1,36 @@
+[project]
+name = "045-molecule-3d"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Hodaka Mori", email = "hodaka.mori.office@gmail.com" }
+]
+dependencies = [
+    "pandas>=2.2.3",
+    "numpy>=2.0.2",
+    "scikit-learn>=1.6.1",
+    "matplotlib>=3.9.4",
+    "rdkit>=2024.9.6",
+    "xgboost>=2.1.4",
+    "lightgbm>=4.6.0",
+    "deepchem>=2.8.0",
+    "torch-geometric>=2.6.1",
+    "pip>=25.1.1",
+    "tabulate>=0.9.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/_045_molecule_3d"]
