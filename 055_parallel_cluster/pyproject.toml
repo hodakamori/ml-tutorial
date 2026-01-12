@@ -1,0 +1,10 @@
+[project]
+name = "055-parallel-cluster"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "aws-parallelcluster>=3.14.1",
+    "awscli>=1.44.15",
+]

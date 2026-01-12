@@ -1,0 +1,55 @@
+Region: ap-northeast-1
+Image:
+  Os: ubuntu2204
+HeadNode:
+  InstanceType: t3.medium
+  Networking:
+    SubnetId: subnet-0369d2a5c765c0062
+    ElasticIp: true
+  Ssh:
+    KeyName: pcluster-key-ed25519
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+  CustomActions:
+    OnNodeConfigured:
+      Script: s3://parallelcluster-7d76e382afe14426-v1-do-not-delete/scripts/install_software.sh
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+    - Name: cpu
+      ComputeResources:
+        - Name: t3medium
+          InstanceType: t3.medium
+          MinCount: 0
+          MaxCount: 2
+      Networking:
+        SubnetIds:
+          - subnet-0b6a902567ada3826
+      Iam:
+        AdditionalIamPolicies:
+          - Policy: arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      CustomActions:
+        OnNodeConfigured:
+          Script: s3://parallelcluster-7d76e382afe14426-v1-do-not-delete/scripts/install_software.sh
+    - Name: gpu
+      ComputeResources:
+        - Name: g4dnxlarge
+          InstanceType: g4dn.xlarge
+          MinCount: 0
+          MaxCount: 2
+      Networking:
+        SubnetIds:
+          - subnet-0b6a902567ada3826
+      Iam:
+        AdditionalIamPolicies:
+          - Policy: arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      CustomActions:
+        OnNodeConfigured:
+          Script: s3://parallelcluster-7d76e382afe14426-v1-do-not-delete/scripts/install_software.sh
+SharedStorage:
+  - MountDir: /shared
+    Name: efs-shared
+    StorageType: Efs
+    EfsSettings:
+      FileSystemId: fs-0d064794a0b939077
