@@ -1,0 +1,6 @@
+sample_id,anomaly_type,description
+PET_007,high_noise,noise level increased to ~3x normal
+PET_018,spike,three artificial spike outliers
+PET_026,low_signal,overall intensity reduced to ~30% of normal
+PET_033,charging_shift,large charging shift of ~0.3 eV
+PET_044,unmodeled_shoulder,weak 4th component near 285.5 eV (not in 3-peak model)
