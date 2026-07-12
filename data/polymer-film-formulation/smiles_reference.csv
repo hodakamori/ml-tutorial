@@ -1,0 +1,25 @@
+material_name,role,smiles,note
+Polyethylene,base_polymer,CC,ethylene repeat unit (representative)
+Polypropylene,base_polymer,CC(C),propylene repeat unit (representative)
+Polystyrene,base_polymer,CCc1ccccc1,styrene repeat unit (representative)
+Poly(vinyl chloride),base_polymer,CCCl,vinyl chloride repeat unit (representative)
+Poly(methyl methacrylate),base_polymer,CC(C)(C)C(=O)OC,MMA repeat unit (representative)
+Polycarbonate,base_polymer,CC(C)(c1ccc(O)cc1)c1ccc(O)cc1,bisphenol-A based (representative monomer)
+Poly(lactic acid),base_polymer,CC(O)C(=O)O,lactic acid monomer (representative)
+Poly(ethylene terephthalate),base_polymer,OCCOC(=O)c1ccc(C(=O)O)cc1,PET repeat unit (representative)
+Poly(vinyl alcohol),base_polymer,CC(O),vinyl alcohol repeat unit (representative)
+Nylon 6,base_polymer,O=C1CCCCCN1,caprolactam (representative monomer)
+Dioctyl phthalate,plasticizer,CCCCC(CC)COC(=O)c1ccccc1C(=O)OCC(CC)CCCC,bis(2-ethylhexyl) phthalate / DEHP
+Dibutyl phthalate,plasticizer,CCCCOC(=O)c1ccccc1C(=O)OCCCC,
+Acetyl tributyl citrate,plasticizer,CCCCOC(=O)CC(OC(C)=O)(C(=O)OCCCC)CC(=O)OCCCC,
+Triacetin,plasticizer,CC(=O)OCC(OC(C)=O)COC(C)=O,glyceryl triacetate
+Glycerol,plasticizer,OCC(O)CO,
+Titanium dioxide,filler,O=[Ti]=O,inorganic; may not yield useful organic fingerprint
+Calcium carbonate,filler,[Ca+2].[O-]C([O-])=O,inorganic; may not yield useful organic fingerprint
+Talc,filler,O.O.[Mg+2].[Mg+2].[Mg+2].[O-][Si]([O-])=O,idealized; inorganic mineral
+Butylated hydroxytoluene,antioxidant,Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,BHT
+Irganox 1010,antioxidant,CC(C)(C)c1cc(CCC(=O)OCC(COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)(COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)COC(=O)CCc2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)cc(C(C)(C)C)c1O,pentaerythritol tetrakis(3-(3\,5-di-tert-butyl-4-hydroxyphenyl)propionate)
+Benzophenone,uv_absorber,O=C(c1ccccc1)c1ccccc1,
+2-Hydroxy-4-methoxybenzophenone,uv_absorber,COc1ccc(C(=O)c2ccccc2)c(O)c1,oxybenzone / BP-3
+Stearic acid,lubricant,CCCCCCCCCCCCCCCCCC(=O)O,
+Erucamide,lubricant,CCCCCCCCC=CCCCCCCCCCCCC(N)=O,(Z)-docos-13-enamide

@@ -1,0 +1,501 @@
+sample_id,base_polymer,additive,additive_loading_wt%,compounding_temperature_C,compounding_time_min,tensile_strength_MPa,transparency_percent,oxygen_permeability_cc_mm_m2_day_atm
+PF-0001,Poly(lactic acid),Glycerol,15.91,187.9,2.9,47.78,90.27,903.531
+PF-0002,Polypropylene,Calcium carbonate,17.35,215.8,12.7,40.39,61.08,823.609
+PF-0003,Poly(lactic acid),Irganox 1010,0.17,173.8,26.0,53.07,91.48,555.197
+PF-0004,Polystyrene,Titanium dioxide,16.42,241.4,20.7,49.13,52.34,939.317
+PF-0005,Poly(ethylene terephthalate),Irganox 1010,1.0,270.5,8.9,88.21,90.82,60.112
+PF-0006,Poly(vinyl alcohol),Acetyl tributyl citrate,14.1,193.3,8.4,63.12,95.1,4.888
+PF-0007,Poly(lactic acid),Stearic acid,0.54,195.2,25.6,66.08,94.08,469.843
+PF-0008,Poly(vinyl chloride),Calcium carbonate,,179.4,10.9,58.45,69.12,108.064
+PF-0009,Polypropylene,Calcium carbonate,27.9,218.9,28.4,36.85,42.27,807.717
+PF-0010,Polystyrene,Triacetin,16.5,220.7,24.7,43.83,94.06,1836.231
+PF-0011,Poly(lactic acid),Stearic acid,1.37,198.9,3.2,52.38,90.35,510.034
+PF-0012,Poly(vinyl alcohol),Dibutyl phthalate,14.88,206.4,17.9,63.73,93.95,4.631
+PF-0013,Poly(vinyl chloride),Benzophenone,,187.1,,54.72,83.4,96.165
+PF-0014,Polypropylene,Glycerol,5.74,204.1,15.2,34.39,89.86,1671.379
+PF-0015,Poly(ethylene terephthalate),Stearic acid,1.84,266.5,,86.36,92.19,69.688
+PF-0016,Poly(ethylene terephthalate),Talc,22.12,,21.1,92.45,50.38,12.27
+PF-0017,Polypropylene,Dibutyl phthalate,19.39,207.8,23.1,22.12,90.87,1238.41
+PF-0018,Polycarbonate,Erucamide,1.72,276.8,12.3,65.67,89.25,
+PF-0019,Polypropylene,Dibutyl phthalate,14.55,198.0,12.7,26.8,89.74,1770.935
+PF-0020,Polyethylene,Stearic acid,0.99,156.5,27.7,18.23,86.41,2154.069
+PF-0021,Poly(lactic acid),Calcium carbonate,19.13,197.4,18.6,65.43,59.53,259.517
+PF-0022,Poly(methyl methacrylate),Erucamide,0.64,234.3,14.1,71.09,93.69,400.243
+PF-0023,Nylon 6,Glycerol,9.51,261.1,26.0,74.96,,53.709
+PF-0024,Polypropylene,Calcium carbonate,23.11,195.9,6.2,35.22,52.77,542.594
+PF-0025,Polypropylene,Talc,12.6,229.5,20.2,33.94,,1192.909
+PF-0026,Poly(lactic acid),Glycerol,11.22,182.1,3.5,50.32,91.18,772.814
+PF-0027,Poly(methyl methacrylate),Triacetin,5.94,226.5,14.4,61.32,94.37,
+PF-0028,Polycarbonate,Calcium carbonate,29.51,262.2,29.3,70.81,45.67,344.088
+PF-0029,Polystyrene,Acetyl tributyl citrate,15.35,215.4,22.2,46.85,95.55,
+PF-0030,Poly(ethylene terephthalate),Titanium dioxide,,274.5,2.6,86.49,53.53,28.318
+PF-0031,Poly(ethylene terephthalate),Dioctyl phthalate,21.29,269.7,15.2,67.85,93.22,80.921
+PF-0032,Poly(ethylene terephthalate),Stearic acid,1.12,276.0,14.5,,93.8,71.828
+PF-0033,Poly(lactic acid),Irganox 1010,0.78,182.8,27.6,57.55,98.9,528.952
+PF-0034,Poly(lactic acid),Benzophenone,,196.6,10.0,55.1,94.21,489.759
+PF-0035,Polypropylene,Irganox 1010,0.76,207.5,27.8,,94.03,1770.31
+PF-0036,Poly(vinyl chloride),Dioctyl phthalate,,183.2,24.3,,83.51,187.233
+PF-0037,Polycarbonate,Irganox 1010,0.6,252.6,23.4,72.85,91.39,850.431
+PF-0038,Polypropylene,Talc,4.21,214.3,25.6,38.15,83.19,964.562
+PF-0039,Poly(methyl methacrylate),2-Hydroxy-4-methoxybenzophenone,0.87,239.0,4.0,63.55,88.09,491.074
+PF-0040,Poly(vinyl alcohol),Glycerol,10.84,208.9,16.4,69.65,91.12,5.206
+PF-0041,Poly(methyl methacrylate),Dioctyl phthalate,29.17,213.1,,47.45,92.92,726.116
+PF-0042,Polyethylene,Irganox 1010,0.91,176.0,20.6,23.41,90.99,
+PF-0043,Polystyrene,Glycerol,11.36,184.3,19.5,37.86,89.11,5128.608
+PF-0044,Poly(vinyl chloride),Glycerol,5.67,177.2,11.3,52.91,83.78,99.945
+PF-0045,Nylon 6,Triacetin,18.63,235.2,18.5,69.19,85.24,37.137
+PF-0046,Poly(vinyl chloride),Stearic acid,0.51,186.6,17.5,54.98,81.68,122.008
+PF-0047,Polystyrene,Dibutyl phthalate,8.32,203.9,17.6,43.48,92.59,2869.792
+PF-0048,Poly(lactic acid),Glycerol,4.71,192.0,20.6,58.3,91.23,730.395
+PF-0049,Polypropylene,Benzophenone,1.43,218.0,8.1,33.75,88.93,
+PF-0050,Polycarbonate,Benzophenone,2.73,242.2,27.4,62.72,90.57,1149.797
+PF-0051,Polypropylene,Dibutyl phthalate,6.41,193.2,20.0,33.77,89.67,1595.445
+PF-0052,Poly(vinyl chloride),Dioctyl phthalate,,192.9,22.4,40.74,81.7,200.636
+PF-0053,Poly(vinyl chloride),Calcium carbonate,25.74,168.6,8.6,59.95,41.18,37.218
+PF-0054,Polypropylene,Dioctyl phthalate,5.96,207.6,19.5,33.8,90.26,2172.591
+PF-0055,Polystyrene,Talc,9.91,211.1,26.8,50.44,,1437.049
+PF-0056,Nylon 6,Glycerol,14.42,252.3,,70.84,85.1,54.516
+PF-0057,Polyethylene,Stearic acid,0.61,183.0,13.3,18.66,89.27,1653.64
+PF-0058,Poly(methyl methacrylate),Stearic acid,2.49,210.1,16.9,71.13,93.2,272.578
+PF-0059,Poly(lactic acid),Stearic acid,0.76,197.7,27.1,60.12,92.14,622.88
+PF-0060,Poly(ethylene terephthalate),Benzophenone,2.89,,24.8,83.95,91.24,63.271
+PF-0061,Polyethylene,Acetyl tributyl citrate,12.53,173.4,,12.95,93.02,2691.752
+PF-0062,Poly(vinyl alcohol),Erucamide,1.18,182.0,22.1,69.38,90.41,3.618
+PF-0063,Poly(vinyl alcohol),Erucamide,,216.3,3.9,75.81,90.74,2.369
+PF-0064,Nylon 6,Titanium dioxide,17.57,238.0,24.1,91.13,48.13,14.967
+PF-0065,Poly(methyl methacrylate),Dibutyl phthalate,10.42,231.2,10.5,59.62,92.88,865.25
+PF-0066,Poly(ethylene terephthalate),Dioctyl phthalate,20.89,267.9,4.8,68.15,92.06,86.531
+PF-0067,Poly(lactic acid),Talc,8.29,180.2,17.8,66.46,79.16,313.375
+PF-0068,Polypropylene,2-Hydroxy-4-methoxybenzophenone,1.83,210.1,8.1,32.88,89.69,1536.536
+PF-0069,Poly(ethylene terephthalate),Titanium dioxide,19.31,271.1,,95.35,48.29,17.184
+PF-0070,Poly(methyl methacrylate),Talc,24.39,219.7,,82.25,50.84,114.55
+PF-0071,Polyethylene,Erucamide,1.8,,15.1,15.57,87.69,
+PF-0072,Polystyrene,Titanium dioxide,13.19,191.9,7.8,48.83,60.96,1080.9
+PF-0073,Poly(ethylene terephthalate),Stearic acid,0.3,291.3,23.0,75.37,86.85,52.197
+PF-0074,Poly(vinyl chloride),Irganox 1010,0.16,179.8,24.5,58.42,84.09,62.757
+PF-0075,Polypropylene,Titanium dioxide,,191.8,22.3,39.59,81.94,1121.324
+PF-0076,Poly(methyl methacrylate),Irganox 1010,0.92,216.5,8.7,73.9,,463.064
+PF-0077,Polycarbonate,Titanium dioxide,10.09,255.3,16.7,74.95,71.58,
+PF-0078,Polyethylene,Dioctyl phthalate,21.06,166.8,25.2,7.88,89.68,1989.02
+PF-0079,Polyethylene,Triacetin,3.1,216.6,8.1,1.0,77.32,2206.462
+PF-0080,Polypropylene,Acetyl tributyl citrate,15.45,213.0,15.1,29.26,93.08,1620.266
+PF-0081,Poly(lactic acid),Triacetin,,194.7,12.3,52.34,,483.989
+PF-0082,Poly(vinyl alcohol),Acetyl tributyl citrate,12.93,196.0,8.5,,95.42,4.284
+PF-0083,Polypropylene,2-Hydroxy-4-methoxybenzophenone,1.01,194.2,21.4,38.76,89.5,1321.931
+PF-0084,Poly(methyl methacrylate),Butylated hydroxytoluene,0.52,196.4,7.4,61.36,88.8,299.209
+PF-0085,Poly(ethylene terephthalate),Stearic acid,2.26,238.5,16.1,76.5,84.35,59.859
+PF-0086,Poly(vinyl chloride),Stearic acid,1.41,,27.4,58.92,84.77,168.972
+PF-0087,Poly(ethylene terephthalate),Talc,18.27,275.0,4.9,88.18,57.56,20.416
+PF-0088,Poly(ethylene terephthalate),2-Hydroxy-4-methoxybenzophenone,2.83,277.6,13.3,,94.25,43.964
+PF-0089,Polystyrene,2-Hydroxy-4-methoxybenzophenone,1.96,208.0,20.6,50.24,93.87,2287.247
+PF-0090,Polyethylene,Erucamide,0.65,180.4,4.5,16.5,,2959.157
+PF-0091,Polystyrene,Butylated hydroxytoluene,0.81,183.9,5.0,40.44,87.74,2561.604
+PF-0092,Polyethylene,Dioctyl phthalate,5.23,163.9,,13.15,90.31,2722.728
+PF-0093,Poly(lactic acid),Calcium carbonate,11.09,185.9,11.9,60.45,73.93,465.002
+PF-0094,Poly(lactic acid),Talc,9.4,201.9,3.8,58.06,73.21,
+PF-0095,Polycarbonate,Irganox 1010,0.53,287.8,22.0,67.92,86.76,1161.079
+PF-0096,Polystyrene,2-Hydroxy-4-methoxybenzophenone,1.37,231.8,26.7,45.44,92.68,2634.283
+PF-0097,Polycarbonate,Irganox 1010,0.62,276.6,,68.17,90.2,978.86
+PF-0098,Polypropylene,Dioctyl phthalate,28.57,207.8,18.4,14.24,89.29,2243.462
+PF-0099,Poly(ethylene terephthalate),Dioctyl phthalate,8.49,270.4,20.6,80.38,90.3,100.7
+PF-0100,Poly(lactic acid),Dibutyl phthalate,4.92,175.2,9.4,50.74,94.55,675.815
+PF-0101,Polypropylene,Irganox 1010,0.97,209.8,,37.24,92.9,2014.7
+PF-0102,Poly(lactic acid),Stearic acid,0.34,191.5,20.4,62.03,93.0,619.648
+PF-0103,Poly(ethylene terephthalate),Titanium dioxide,7.96,272.7,22.8,89.31,77.67,39.255
+PF-0104,Polypropylene,Titanium dioxide,11.24,215.8,22.9,,65.86,1024.317
+PF-0105,Polypropylene,Stearic acid,1.98,196.1,28.4,40.97,89.66,1278.139
+PF-0106,Polyethylene,Irganox 1010,0.67,186.0,22.3,22.32,90.8,1570.05
+PF-0107,Polystyrene,Irganox 1010,0.34,196.7,10.5,46.68,90.06,
+PF-0108,Polypropylene,Triacetin,9.0,211.4,28.7,35.67,92.59,1795.937
+PF-0109,Polypropylene,Triacetin,12.24,212.2,29.1,31.91,91.18,1203.293
+PF-0110,Poly(lactic acid),2-Hydroxy-4-methoxybenzophenone,3.0,,23.5,60.51,90.23,364.027
+PF-0111,Nylon 6,Glycerol,10.44,247.0,22.9,72.82,86.03,47.396
+PF-0112,Poly(methyl methacrylate),Benzophenone,1.58,201.0,20.2,71.27,89.09,394.981
+PF-0113,Poly(lactic acid),Stearic acid,2.15,191.7,4.5,61.96,92.03,517.723
+PF-0114,Polystyrene,Glycerol,3.7,227.3,3.9,40.2,88.51,3306.793
+PF-0115,Poly(methyl methacrylate),Benzophenone,1.38,227.3,12.0,73.79,94.78,
+PF-0116,Poly(ethylene terephthalate),Benzophenone,1.3,265.4,25.2,87.94,90.42,49.733
+PF-0117,Polystyrene,Dibutyl phthalate,8.14,211.2,27.2,41.96,94.14,3633.286
+PF-0118,Polyethylene,Triacetin,3.04,182.3,25.1,19.31,89.75,2658.743
+PF-0119,Polypropylene,Butylated hydroxytoluene,0.66,209.5,26.6,36.6,90.84,1410.85
+PF-0120,Poly(lactic acid),Titanium dioxide,10.6,173.2,11.3,58.74,68.78,402.655
+PF-0121,Poly(methyl methacrylate),2-Hydroxy-4-methoxybenzophenone,1.74,239.1,24.2,68.77,91.93,417.591
+PF-0122,Poly(lactic acid),Glycerol,17.81,200.6,5.7,,87.49,1305.265
+PF-0123,Polyethylene,Acetyl tributyl citrate,11.6,177.1,29.7,15.54,90.92,
+PF-0124,Poly(vinyl alcohol),Titanium dioxide,15.31,182.4,28.2,72.99,62.46,1.061
+PF-0125,Polypropylene,Talc,15.22,201.8,28.0,41.87,62.48,612.088
+PF-0126,Poly(vinyl chloride),Dibutyl phthalate,8.98,209.3,7.7,38.32,76.99,151.082
+PF-0127,Polypropylene,Glycerol,5.15,204.7,2.5,,86.1,1890.127
+PF-0128,Polyethylene,Stearic acid,2.82,170.9,4.5,21.76,86.43,1843.896
+PF-0129,Polystyrene,Acetyl tributyl citrate,11.7,219.1,21.0,41.26,92.08,3258.187
+PF-0130,Poly(methyl methacrylate),Stearic acid,0.26,212.8,,67.98,94.34,454.286
+PF-0131,Polycarbonate,Acetyl tributyl citrate,10.57,266.0,21.0,64.11,90.81,1294.819
+PF-0132,Nylon 6,Dioctyl phthalate,7.7,248.5,18.8,72.2,86.75,42.55
+PF-0133,Poly(vinyl chloride),Acetyl tributyl citrate,7.04,179.0,18.1,56.88,86.55,115.841
+PF-0134,Polypropylene,Dibutyl phthalate,6.17,199.3,15.1,33.64,89.59,1459.839
+PF-0135,Poly(vinyl alcohol),Erucamide,1.79,205.9,28.6,,93.01,3.214
+PF-0136,Nylon 6,Glycerol,10.44,250.2,27.0,73.11,85.5,
+PF-0137,Poly(methyl methacrylate),Glycerol,7.72,,10.7,62.15,87.79,559.432
+PF-0138,Poly(ethylene terephthalate),Talc,17.82,270.0,28.0,86.92,61.47,
+PF-0139,Poly(ethylene terephthalate),Stearic acid,,266.4,21.8,89.64,96.24,46.95
+PF-0140,Polycarbonate,Acetyl tributyl citrate,6.96,260.7,6.9,64.38,93.57,1533.582
+PF-0141,Polyethylene,Acetyl tributyl citrate,,186.2,5.6,12.31,86.02,2129.457
+PF-0142,Polypropylene,Titanium dioxide,8.48,210.7,9.4,,70.07,654.247
+PF-0143,Nylon 6,Calcium carbonate,7.31,223.2,13.7,73.35,73.54,17.017
+PF-0144,Polystyrene,Butylated hydroxytoluene,0.51,199.6,9.7,47.86,89.08,2145.683
+PF-0145,Nylon 6,Dibutyl phthalate,10.74,254.0,8.3,73.42,87.37,26.747
+PF-0146,Nylon 6,Titanium dioxide,2.95,251.2,28.7,83.2,82.18,37.246
+PF-0147,Poly(methyl methacrylate),Dioctyl phthalate,7.96,212.3,25.3,62.29,93.69,695.266
+PF-0148,Poly(vinyl alcohol),Glycerol,17.05,201.1,6.6,61.54,94.44,5.446
+PF-0149,Polyethylene,Irganox 1010,0.94,165.2,23.7,18.06,91.07,2296.785
+PF-0150,Poly(methyl methacrylate),Calcium carbonate,28.39,238.7,24.3,70.42,47.48,308.548
+PF-0151,Polycarbonate,,14.58,278.2,27.5,69.64,66.16,956.964
+PF-0152,Poly(methyl methacrylate),Glycerol,15.29,,21.2,,92.91,812.229
+PF-0153,Polyethylene,Benzophenone,2.76,198.9,4.9,13.83,85.77,1790.006
+PF-0154,Polypropylene,2-Hydroxy-4-methoxybenzophenone,2.45,220.7,5.6,34.39,87.86,2130.486
+PF-0155,Polyethylene,Acetyl tributyl citrate,23.0,168.3,6.3,7.9,90.37,3965.524
+PF-0156,Polystyrene,Benzophenone,2.78,189.5,17.2,,89.59,3084.366
+PF-0157,Poly(vinyl alcohol),Irganox 1010,0.46,198.4,5.9,77.44,93.95,
+PF-0158,Poly(ethylene terephthalate),Butylated hydroxytoluene,0.31,260.7,,84.72,88.54,61.286
+PF-0159,Poly(lactic acid),Dioctyl phthalate,16.86,177.9,23.1,43.69,92.58,
+PF-0160,Polypropylene,Butylated hydroxytoluene,0.14,211.9,26.3,42.0,91.42,1126.504
+PF-0161,Poly(vinyl chloride),Triacetin,3.73,192.3,13.8,54.96,81.18,142.884
+PF-0162,Polypropylene,Dibutyl phthalate,3.45,212.3,29.9,34.86,96.32,1260.179
+PF-0163,Polypropylene,Calcium carbonate,26.47,194.9,5.1,41.58,43.68,595.707
+PF-0164,Poly(lactic acid),Dibutyl phthalate,18.58,184.9,24.2,45.86,94.67,1195.258
+PF-0165,Polystyrene,Glycerol,4.37,216.2,,49.6,93.47,3769.647
+PF-0166,Polypropylene,Calcium carbonate,12.88,203.2,18.1,41.69,72.9,1315.24
+PF-0167,Poly(ethylene terephthalate),Calcium carbonate,24.07,268.5,12.9,87.69,55.55,24.922
+PF-0168,Poly(methyl methacrylate),Irganox 1010,0.88,226.7,24.7,70.38,94.36,503.481
+PF-0169,Poly(vinyl alcohol),Stearic acid,1.44,198.7,25.9,73.0,96.36,
+PF-0170,Poly(vinyl alcohol),Butylated hydroxytoluene,0.77,208.5,18.6,81.12,94.99,3.296
+PF-0171,Poly(vinyl chloride),Dibutyl phthalate,20.55,178.7,4.9,39.07,84.42,294.89
+PF-0172,Nylon 6,Dioctyl phthalate,11.2,244.0,2.7,65.96,86.87,34.229
+PF-0173,Polycarbonate,Dibutyl phthalate,15.96,,25.9,56.9,92.34,1691.376
+PF-0174,Polystyrene,Talc,4.31,232.2,6.9,49.89,86.45,1630.909
+PF-0175,Poly(ethylene terephthalate),Dioctyl phthalate,21.71,271.9,15.0,70.04,96.56,89.147
+PF-0176,Nylon 6,Acetyl tributyl citrate,13.61,250.0,17.1,73.62,90.25,52.18
+PF-0177,Poly(ethylene terephthalate),2-Hydroxy-4-methoxybenzophenone,1.87,269.5,12.3,,92.11,97.236
+PF-0178,Poly(methyl methacrylate),Talc,22.19,229.0,21.4,76.74,53.98,134.469
+PF-0179,Poly(methyl methacrylate),Stearic acid,0.36,204.5,8.2,66.76,89.44,364.34
+PF-0180,Polystyrene,2-Hydroxy-4-methoxybenzophenone,0.29,224.9,19.9,,93.01,3314.38
+PF-0181,Nylon 6,Titanium dioxide,4.42,246.9,5.0,77.05,77.41,25.666
+PF-0182,Poly(vinyl chloride),Glycerol,12.96,187.6,14.3,51.21,78.21,190.495
+PF-0183,Polypropylene,Stearic acid,2.62,248.7,15.8,16.42,,1270.991
+PF-0184,Polypropylene,Irganox 1010,0.5,205.5,12.4,38.68,91.48,
+PF-0185,Polystyrene,Dibutyl phthalate,19.31,212.1,23.4,40.64,90.55,
+PF-0186,Poly(vinyl chloride),Glycerol,14.74,190.0,,47.37,79.36,166.017
+PF-0187,Polystyrene,Calcium carbonate,26.7,228.9,7.6,49.92,48.34,1402.952
+PF-0188,Polyethylene,Calcium carbonate,27.06,176.4,26.1,27.47,46.3,787.366
+PF-0189,Polyethylene,Irganox 1010,0.35,147.8,13.6,13.82,84.68,1884.81
+PF-0190,Poly(methyl methacrylate),Talc,18.35,211.5,15.7,76.15,62.5,
+PF-0191,Polypropylene,Butylated hydroxytoluene,0.11,216.6,21.3,36.82,92.36,1691.171
+PF-0192,Poly(ethylene terephthalate),Talc,5.99,252.5,23.1,81.36,77.91,28.067
+PF-0193,Polyethylene,Dibutyl phthalate,5.57,169.4,15.7,20.4,87.84,1795.268
+PF-0194,Polypropylene,,,203.9,5.6,35.23,90.01,1418.469
+PF-0195,Poly(lactic acid),Acetyl tributyl citrate,4.06,179.4,16.9,63.14,92.41,
+PF-0196,Poly(vinyl chloride),Dibutyl phthalate,7.18,180.4,13.8,,83.76,186.075
+PF-0197,Polycarbonate,Titanium dioxide,14.58,251.0,19.9,75.59,58.99,542.335
+PF-0198,Polyethylene,Dioctyl phthalate,26.86,188.7,28.8,1.0,87.92,3730.683
+PF-0199,Nylon 6,Acetyl tributyl citrate,,249.8,19.7,73.22,91.23,47.611
+PF-0200,Poly(ethylene terephthalate),Glycerol,4.38,263.4,17.5,83.76,90.28,45.828
+PF-0201,Polyethylene,Titanium dioxide,8.17,179.7,27.1,,70.04,892.926
+PF-0202,Polyethylene,Glycerol,13.88,176.0,19.6,10.05,86.5,2848.195
+PF-0203,Poly(methyl methacrylate),Dibutyl phthalate,14.91,199.4,7.2,44.62,91.39,415.614
+PF-0204,Polyethylene,Erucamide,1.99,186.7,23.6,20.72,91.16,2554.933
+PF-0205,Poly(methyl methacrylate),Talc,11.42,227.8,22.0,,77.35,
+PF-0206,Polyethylene,Triacetin,10.2,173.0,3.3,13.6,82.13,2413.304
+PF-0207,Poly(methyl methacrylate),Stearic acid,2.1,208.8,24.7,73.53,94.0,309.408
+PF-0208,Poly(lactic acid),Triacetin,,188.8,9.6,53.9,90.15,775.255
+PF-0209,Nylon 6,Triacetin,6.18,235.3,26.9,77.31,88.18,33.509
+PF-0210,Poly(methyl methacrylate),Stearic acid,2.38,224.4,5.5,68.65,93.45,333.942
+PF-0211,Polycarbonate,Triacetin,13.45,,20.1,57.87,90.65,1338.207
+PF-0212,Polypropylene,Irganox 1010,0.62,197.6,10.8,35.36,90.04,1769.552
+PF-0213,Poly(lactic acid),Benzophenone,1.3,188.5,10.9,62.01,90.95,727.934
+PF-0214,Poly(ethylene terephthalate),Dioctyl phthalate,8.88,256.8,24.0,79.46,92.61,
+PF-0215,Nylon 6,Erucamide,,227.9,7.0,76.0,,38.387
+PF-0216,Poly(vinyl chloride),Benzophenone,1.01,,28.6,,84.46,128.808
+PF-0217,Polycarbonate,Erucamide,0.35,272.4,7.1,69.45,90.51,832.514
+PF-0218,Poly(ethylene terephthalate),Dioctyl phthalate,14.43,282.5,20.7,73.04,93.2,59.413
+PF-0219,Polypropylene,Irganox 1010,0.94,234.7,6.7,23.39,84.8,1461.959
+PF-0220,Polycarbonate,Triacetin,9.75,272.7,23.4,69.26,91.74,885.81
+PF-0221,Polycarbonate,Stearic acid,2.76,262.2,26.4,69.48,91.45,1211.391
+PF-0222,Polystyrene,Erucamide,0.89,213.9,,47.21,92.69,2008.188
+PF-0223,Poly(methyl methacrylate),Calcium carbonate,8.88,226.7,20.9,74.76,81.01,449.245
+PF-0224,Poly(vinyl chloride),Talc,20.48,187.1,21.3,59.53,46.78,25.735
+PF-0225,Nylon 6,Butylated hydroxytoluene,0.81,244.6,6.5,79.69,87.57,25.217
+PF-0226,Poly(vinyl chloride),Dioctyl phthalate,15.02,188.1,12.0,47.08,83.77,152.638
+PF-0227,Nylon 6,2-Hydroxy-4-methoxybenzophenone,0.47,258.4,27.1,77.62,89.02,
+PF-0228,Poly(vinyl alcohol),Dibutyl phthalate,15.93,208.8,21.8,61.1,99.0,3.857
+PF-0229,Poly(methyl methacrylate),Dibutyl phthalate,6.78,212.6,16.0,62.01,98.02,442.386
+PF-0230,Polypropylene,,12.41,217.4,26.8,,61.54,1307.606
+PF-0231,Poly(methyl methacrylate),Stearic acid,0.36,222.0,11.6,71.72,92.59,243.735
+PF-0232,Poly(ethylene terephthalate),Erucamide,1.58,267.5,14.9,88.74,94.55,64.707
+PF-0233,Polyethylene,Benzophenone,2.39,177.4,22.5,23.16,,1581.17
+PF-0234,Polyethylene,Acetyl tributyl citrate,5.39,153.3,23.8,9.0,86.94,2085.111
+PF-0235,Poly(vinyl alcohol),Dioctyl phthalate,11.89,197.9,10.2,65.92,98.93,3.655
+PF-0236,Poly(ethylene terephthalate),Irganox 1010,0.22,268.3,3.9,80.53,92.04,57.274
+PF-0237,Poly(ethylene terephthalate),Stearic acid,1.26,278.3,12.2,83.1,90.09,45.824
+PF-0238,Poly(lactic acid),Irganox 1010,0.11,198.3,4.3,52.33,91.72,487.071
+PF-0239,Poly(ethylene terephthalate),Dibutyl phthalate,5.49,263.6,16.4,88.93,91.5,58.72
+PF-0240,Poly(methyl methacrylate),Glycerol,14.28,227.9,6.3,64.11,91.86,760.5
+PF-0241,Nylon 6,Calcium carbonate,10.9,256.3,24.6,,71.62,17.447
+PF-0242,Polypropylene,Calcium carbonate,,213.6,12.4,40.92,74.99,748.291
+PF-0243,Poly(methyl methacrylate),2-Hydroxy-4-methoxybenzophenone,1.91,216.3,23.3,73.47,,500.234
+PF-0244,Polyethylene,Benzophenone,0.73,169.4,26.1,19.07,89.43,2170.042
+PF-0245,Poly(vinyl chloride),Calcium carbonate,17.58,185.7,20.2,,53.18,59.045
+PF-0246,Polystyrene,Stearic acid,,202.8,10.0,49.97,95.11,
+PF-0247,Polypropylene,Triacetin,11.15,204.2,15.1,35.0,92.31,2657.594
+PF-0248,Polyethylene,Titanium dioxide,12.45,181.3,8.9,19.2,,1178.269
+PF-0249,Polycarbonate,Triacetin,18.84,257.0,4.2,57.29,93.68,1067.854
+PF-0250,Nylon 6,Calcium carbonate,17.8,236.6,7.1,80.35,57.14,14.185
+PF-0251,Poly(vinyl chloride),Glycerol,5.56,187.5,28.3,51.42,82.61,224.254
+PF-0252,Polypropylene,Dibutyl phthalate,22.23,196.7,29.2,15.18,90.83,2819.441
+PF-0253,Nylon 6,Talc,24.29,253.1,20.7,88.81,42.38,6.987
+PF-0254,Poly(vinyl alcohol),2-Hydroxy-4-methoxybenzophenone,2.21,202.4,,72.43,94.31,3.385
+PF-0255,Polyethylene,Dioctyl phthalate,12.7,202.9,12.7,2.61,83.16,3057.281
+PF-0256,Poly(methyl methacrylate),Talc,3.36,226.2,6.0,64.94,85.15,232.824
+PF-0257,Poly(ethylene terephthalate),Acetyl tributyl citrate,24.22,266.6,4.7,66.51,,89.048
+PF-0258,Polypropylene,Irganox 1010,0.47,193.7,3.9,31.83,87.0,1773.106
+PF-0259,Polystyrene,Triacetin,19.29,211.1,4.5,36.9,90.94,4148.797
+PF-0260,Polyethylene,Talc,18.43,,4.0,15.65,53.03,757.261
+PF-0261,Polystyrene,Irganox 1010,,207.7,3.4,,90.17,1502.432
+PF-0262,Nylon 6,Butylated hydroxytoluene,0.6,258.5,23.3,83.9,91.46,38.765
+PF-0263,Poly(ethylene terephthalate),Benzophenone,2.72,275.3,22.2,84.37,89.99,
+PF-0264,Nylon 6,Dibutyl phthalate,21.92,249.3,7.6,64.47,90.31,49.629
+PF-0265,Poly(ethylene terephthalate),Acetyl tributyl citrate,23.12,253.4,28.2,65.81,89.0,69.523
+PF-0266,Polyethylene,Calcium carbonate,22.15,179.1,13.5,22.44,53.28,822.385
+PF-0267,Polypropylene,Irganox 1010,0.86,202.7,10.0,36.17,89.23,1456.381
+PF-0268,Poly(lactic acid),Stearic acid,2.61,195.6,21.3,60.16,92.69,704.738
+PF-0269,Nylon 6,Titanium dioxide,14.12,249.6,14.0,84.75,56.7,29.675
+PF-0270,Polypropylene,Irganox 1010,0.15,185.0,27.1,37.74,87.01,1449.69
+PF-0271,Polycarbonate,Stearic acid,0.44,294.1,,57.92,87.32,897.369
+PF-0272,Poly(methyl methacrylate),Talc,14.98,220.7,9.7,72.81,68.78,134.872
+PF-0273,Poly(vinyl alcohol),Acetyl tributyl citrate,12.97,201.4,13.2,62.81,92.26,2.928
+PF-0274,Poly(ethylene terephthalate),Titanium dioxide,,275.7,3.3,86.18,81.73,49.062
+PF-0275,Polypropylene,Benzophenone,,188.3,21.7,39.43,88.11,1213.535
+PF-0276,Poly(ethylene terephthalate),Stearic acid,1.19,277.9,16.7,84.3,92.41,34.68
+PF-0277,Poly(ethylene terephthalate),Benzophenone,1.5,274.2,24.0,81.58,90.96,61.05
+PF-0278,Polystyrene,Benzophenone,1.28,236.7,23.7,47.67,89.13,1646.553
+PF-0279,Poly(methyl methacrylate),Calcium carbonate,28.93,208.1,2.9,67.37,45.58,119.501
+PF-0280,Poly(methyl methacrylate),Irganox 1010,0.48,226.4,29.7,69.67,93.24,229.871
+PF-0281,Nylon 6,Acetyl tributyl citrate,24.39,257.1,7.8,61.58,88.04,59.328
+PF-0282,Polypropylene,Dioctyl phthalate,14.43,186.4,22.3,32.31,89.02,2151.126
+PF-0283,Poly(vinyl chloride),Glycerol,4.81,160.0,24.2,51.99,80.78,203.061
+PF-0284,Poly(vinyl alcohol),Erucamide,0.65,190.8,18.8,70.28,94.58,
+PF-0285,Poly(ethylene terephthalate),Benzophenone,,257.0,29.0,86.89,91.23,46.234
+PF-0286,Polypropylene,Butylated hydroxytoluene,0.7,201.0,5.3,35.18,91.97,1489.636
+PF-0287,Nylon 6,Titanium dioxide,13.04,,24.7,76.7,54.56,
+PF-0288,Nylon 6,Butylated hydroxytoluene,0.35,235.9,15.4,80.94,89.37,30.186
+PF-0289,Poly(lactic acid),Dibutyl phthalate,12.06,196.6,6.0,48.06,88.38,850.154
+PF-0290,Polystyrene,2-Hydroxy-4-methoxybenzophenone,1.32,206.4,7.5,47.38,90.46,2012.651
+PF-0291,Polyethylene,Irganox 1010,0.73,174.7,14.0,,90.79,1942.102
+PF-0292,Poly(ethylene terephthalate),Talc,17.0,262.0,4.4,86.84,60.68,14.016
+PF-0293,Poly(lactic acid),Calcium carbonate,16.38,192.8,27.9,61.31,68.78,221.726
+PF-0294,Nylon 6,Stearic acid,0.88,269.3,26.3,74.57,85.51,32.981
+PF-0295,Poly(methyl methacrylate),2-Hydroxy-4-methoxybenzophenone,1.61,230.7,29.4,67.92,96.25,364.203
+PF-0296,Poly(methyl methacrylate),Benzophenone,1.67,210.2,18.5,71.24,92.81,474.593
+PF-0297,Polyethylene,Dibutyl phthalate,13.84,150.5,11.0,4.64,86.1,3543.509
+PF-0298,Poly(vinyl chloride),Erucamide,1.3,194.8,17.0,,80.58,138.048
+PF-0299,Polyethylene,Stearic acid,0.72,185.1,20.7,17.52,89.82,2146.666
+PF-0300,Polypropylene,Dibutyl phthalate,17.93,,,23.15,90.72,
+PF-0301,Poly(vinyl chloride),Stearic acid,2.0,161.4,4.9,52.21,80.23,121.072
+PF-0302,Poly(vinyl chloride),Acetyl tributyl citrate,11.91,179.3,12.3,49.93,84.35,168.467
+PF-0303,Polystyrene,Triacetin,15.84,205.9,17.3,45.12,91.77,4356.023
+PF-0304,Nylon 6,Dioctyl phthalate,6.53,239.3,26.6,73.78,90.11,35.765
+PF-0305,Polyethylene,Irganox 1010,0.8,175.7,20.5,22.22,90.9,2055.012
+PF-0306,Nylon 6,Erucamide,1.28,241.4,3.0,73.8,88.77,29.0
+PF-0307,Nylon 6,Acetyl tributyl citrate,7.51,254.3,9.7,69.92,87.27,32.357
+PF-0308,Poly(ethylene terephthalate),Benzophenone,1.89,280.3,12.9,82.38,90.18,68.998
+PF-0309,Polystyrene,Talc,15.38,202.5,4.8,48.55,65.8,844.607
+PF-0310,Polycarbonate,Butylated hydroxytoluene,0.49,260.6,14.7,72.48,90.47,1320.495
+PF-0311,Polycarbonate,Butylated hydroxytoluene,0.6,254.6,21.4,70.17,92.11,795.872
+PF-0312,Nylon 6,Dibutyl phthalate,21.89,247.6,5.5,63.57,,
+PF-0313,Poly(methyl methacrylate),Erucamide,1.95,211.5,8.7,64.15,93.08,432.362
+PF-0314,Polycarbonate,Irganox 1010,0.15,269.8,23.1,66.83,95.72,1218.868
+PF-0315,Poly(vinyl chloride),Dioctyl phthalate,9.27,195.8,2.3,,79.83,145.913
+PF-0316,Poly(vinyl chloride),Talc,24.57,191.5,21.0,64.78,37.39,23.351
+PF-0317,Polyethylene,Talc,22.82,157.0,11.2,22.61,46.36,
+PF-0318,Poly(methyl methacrylate),Acetyl tributyl citrate,7.26,229.5,3.6,59.14,87.94,558.512
+PF-0319,Polypropylene,Benzophenone,,214.2,27.9,40.66,90.95,1717.575
+PF-0320,Poly(vinyl chloride),Benzophenone,1.67,192.3,13.7,58.28,81.7,144.29
+PF-0321,Poly(lactic acid),2-Hydroxy-4-methoxybenzophenone,0.55,192.6,15.0,56.13,93.29,528.118
+PF-0322,Polystyrene,Acetyl tributyl citrate,24.23,229.1,27.0,34.47,95.1,3546.229
+PF-0323,Poly(vinyl chloride),Dioctyl phthalate,27.04,173.8,15.4,34.64,84.88,170.097
+PF-0324,Polypropylene,Butylated hydroxytoluene,0.79,227.7,27.1,35.32,87.54,1312.922
+PF-0325,Polyethylene,Benzophenone,2.88,173.4,18.5,25.01,87.33,1898.864
+PF-0326,Poly(vinyl alcohol),Glycerol,13.97,205.9,9.9,66.49,91.39,4.716
+PF-0327,Poly(lactic acid),Acetyl tributyl citrate,16.33,201.8,15.6,51.47,98.42,551.64
+PF-0328,Nylon 6,Dibutyl phthalate,14.95,240.1,27.0,,86.17,54.248
+PF-0329,Nylon 6,Calcium carbonate,28.16,251.8,8.3,81.37,40.91,8.954
+PF-0330,Polypropylene,Stearic acid,0.7,214.4,,37.62,93.64,1112.386
+PF-0331,Poly(vinyl alcohol),Triacetin,3.65,227.8,16.2,63.35,89.45,4.477
+PF-0332,Poly(vinyl alcohol),Erucamide,1.68,197.7,22.8,76.09,93.24,4.41
+PF-0333,Polystyrene,Stearic acid,0.39,218.7,,,88.86,2087.1
+PF-0334,Poly(vinyl chloride),Titanium dioxide,9.39,171.8,22.5,62.05,62.94,61.11
+PF-0335,Poly(vinyl alcohol),2-Hydroxy-4-methoxybenzophenone,0.31,206.0,24.0,72.5,91.32,
+PF-0336,Nylon 6,Erucamide,0.94,251.2,29.3,80.14,87.68,31.968
+PF-0337,Polypropylene,Irganox 1010,,182.9,25.2,33.5,87.84,2272.315
+PF-0338,Polypropylene,Talc,9.84,180.0,,34.45,69.73,784.603
+PF-0339,Poly(ethylene terephthalate),Acetyl tributyl citrate,7.9,263.2,10.6,81.59,93.65,41.894
+PF-0340,Polypropylene,Calcium carbonate,26.81,199.4,28.7,45.02,49.13,588.773
+PF-0341,Poly(vinyl alcohol),Titanium dioxide,15.97,217.6,22.2,74.83,58.77,1.403
+PF-0342,Polycarbonate,Acetyl tributyl citrate,5.73,293.3,,60.29,89.33,1245.185
+PF-0343,Polypropylene,Calcium carbonate,19.74,201.6,4.7,35.77,56.15,916.261
+PF-0344,Poly(lactic acid),Glycerol,11.43,187.0,6.6,,89.31,968.658
+PF-0345,Nylon 6,Dibutyl phthalate,9.54,,23.7,71.38,89.03,28.232
+PF-0346,Polyethylene,,16.18,164.6,20.1,26.02,51.97,728.039
+PF-0347,Polyethylene,Butylated hydroxytoluene,0.12,177.3,26.2,18.7,88.33,1691.093
+PF-0348,Poly(vinyl chloride),Acetyl tributyl citrate,4.08,189.8,5.0,49.46,80.75,150.613
+PF-0349,Polyethylene,Dibutyl phthalate,21.48,181.5,7.2,1.0,87.53,2978.42
+PF-0350,Polypropylene,Erucamide,1.75,194.0,13.7,35.99,,1405.944
+PF-0351,Polystyrene,Benzophenone,2.66,,20.9,49.77,,5078.154
+PF-0352,Polyethylene,Calcium carbonate,9.88,198.1,6.2,19.49,70.14,1908.593
+PF-0353,Polypropylene,Stearic acid,1.86,209.4,22.9,41.7,89.68,1068.615
+PF-0354,Polyethylene,2-Hydroxy-4-methoxybenzophenone,1.35,187.0,6.5,21.06,86.02,1491.98
+PF-0355,Poly(ethylene terephthalate),Erucamide,,262.3,6.8,84.93,,45.373
+PF-0356,Polypropylene,,17.14,212.8,7.7,26.2,95.03,1673.652
+PF-0357,Polypropylene,Dioctyl phthalate,15.84,200.4,20.6,28.66,90.45,1530.344
+PF-0358,Polystyrene,Irganox 1010,0.69,222.1,15.0,47.6,93.35,1939.024
+PF-0359,Nylon 6,2-Hydroxy-4-methoxybenzophenone,1.14,252.9,7.8,82.88,87.0,
+PF-0360,Poly(ethylene terephthalate),Calcium carbonate,17.46,277.1,28.2,84.99,63.01,29.049
+PF-0361,Poly(ethylene terephthalate),Triacetin,12.7,281.4,15.8,79.22,,92.372
+PF-0362,Poly(lactic acid),Erucamide,0.93,176.7,23.3,57.53,90.64,472.687
+PF-0363,Polypropylene,Dioctyl phthalate,14.33,193.2,4.8,27.61,91.24,2774.324
+PF-0364,Polycarbonate,Benzophenone,2.75,273.1,,69.54,88.38,1092.209
+PF-0365,Polypropylene,Dioctyl phthalate,7.17,217.3,22.1,34.95,,2567.681
+PF-0366,Poly(methyl methacrylate),Stearic acid,0.32,198.3,21.0,69.16,94.79,299.747
+PF-0367,Polypropylene,Butylated hydroxytoluene,0.72,211.8,11.8,,91.83,1576.261
+PF-0368,Polystyrene,Acetyl tributyl citrate,15.81,209.8,15.2,40.19,95.93,3210.293
+PF-0369,Nylon 6,Stearic acid,1.56,226.0,16.6,70.81,80.75,26.169
+PF-0370,Polyethylene,Butylated hydroxytoluene,,182.4,,17.85,87.18,2632.056
+PF-0371,Poly(ethylene terephthalate),Talc,19.52,287.8,26.1,88.52,53.4,24.149
+PF-0372,Poly(methyl methacrylate),Stearic acid,1.66,225.9,19.0,70.98,95.49,672.581
+PF-0373,Polystyrene,Irganox 1010,0.26,,29.6,41.9,88.81,2891.715
+PF-0374,Poly(vinyl chloride),Erucamide,0.16,185.0,8.1,54.13,85.54,149.857
+PF-0375,Polycarbonate,Butylated hydroxytoluene,0.98,248.1,23.4,68.03,92.0,617.211
+PF-0376,Polyethylene,Talc,22.32,,27.6,25.54,49.16,497.484
+PF-0377,Polypropylene,Acetyl tributyl citrate,,197.1,17.1,25.45,92.17,2157.6
+PF-0378,Poly(ethylene terephthalate),Triacetin,5.8,275.2,12.6,81.59,88.96,60.601
+PF-0379,Polyethylene,Erucamide,2.0,153.9,16.0,15.6,88.49,
+PF-0380,Poly(ethylene terephthalate),Talc,19.82,269.0,25.3,91.43,58.94,19.785
+PF-0381,Polypropylene,Calcium carbonate,10.58,212.1,24.4,39.9,70.98,1048.54
+PF-0382,Poly(methyl methacrylate),Glycerol,10.74,202.1,,61.12,90.81,498.287
+PF-0383,Polyethylene,2-Hydroxy-4-methoxybenzophenone,2.42,178.8,17.3,28.39,88.39,2806.204
+PF-0384,Polyethylene,Dioctyl phthalate,,158.0,5.1,9.3,86.25,2068.983
+PF-0385,Polypropylene,Acetyl tributyl citrate,11.85,222.0,20.9,32.06,88.47,1333.955
+PF-0386,Polycarbonate,Dibutyl phthalate,20.09,252.2,15.0,,93.41,2052.605
+PF-0387,Polystyrene,Triacetin,12.4,182.9,5.7,36.62,89.91,4726.406
+PF-0388,Poly(vinyl chloride),Glycerol,8.68,174.4,14.1,51.39,81.96,170.527
+PF-0389,Polyethylene,Triacetin,15.75,168.6,26.2,12.36,88.58,3041.59
+PF-0390,Polystyrene,Calcium carbonate,21.65,207.0,,55.98,58.91,1081.216
+PF-0391,Poly(vinyl alcohol),Talc,3.36,207.9,11.9,75.88,87.45,3.083
+PF-0392,Poly(vinyl chloride),Acetyl tributyl citrate,20.31,188.0,15.3,45.8,,195.57
+PF-0393,Poly(ethylene terephthalate),Titanium dioxide,4.84,288.4,8.3,81.36,75.95,37.043
+PF-0394,Polycarbonate,2-Hydroxy-4-methoxybenzophenone,2.15,272.8,6.1,64.43,88.63,1239.08
+PF-0395,Polypropylene,Dibutyl phthalate,23.29,189.5,,15.39,88.59,2530.093
+PF-0396,Poly(ethylene terephthalate),Dibutyl phthalate,18.09,251.0,16.7,70.38,90.89,71.905
+PF-0397,Polystyrene,Glycerol,17.18,209.7,,42.47,89.64,
+PF-0398,Nylon 6,Irganox 1010,,268.8,24.4,75.23,84.18,33.565
+PF-0399,Poly(methyl methacrylate),Titanium dioxide,5.33,206.5,26.3,71.97,78.81,392.0
+PF-0400,Poly(ethylene terephthalate),Acetyl tributyl citrate,18.32,263.5,7.2,72.28,92.04,83.487
+PF-0401,Nylon 6,Talc,5.74,252.1,19.9,84.7,78.93,11.912
+PF-0402,Poly(ethylene terephthalate),Talc,16.25,266.5,27.6,88.44,61.15,18.854
+PF-0403,Poly(ethylene terephthalate),Benzophenone,0.63,277.4,26.3,82.55,90.65,53.903
+PF-0404,Polypropylene,Erucamide,,203.4,3.7,31.96,89.87,1621.459
+PF-0405,Nylon 6,Calcium carbonate,13.47,234.3,18.4,82.33,62.89,
+PF-0406,Polypropylene,Calcium carbonate,16.52,208.3,6.5,39.71,61.22,1060.957
+PF-0407,Polycarbonate,Stearic acid,,283.0,4.8,67.73,87.75,933.307
+PF-0408,Polystyrene,Dioctyl phthalate,18.04,204.7,13.2,,92.23,5252.758
+PF-0409,Poly(ethylene terephthalate),Calcium carbonate,19.23,254.9,2.4,79.56,57.37,23.823
+PF-0410,Polypropylene,Benzophenone,0.75,224.0,3.8,,89.63,1249.674
+PF-0411,Polyethylene,Butylated hydroxytoluene,0.68,,10.4,17.09,85.7,1690.563
+PF-0412,Polypropylene,Talc,21.75,217.1,18.4,44.91,52.28,373.312
+PF-0413,Polyethylene,Benzophenone,0.63,167.5,26.6,22.33,89.67,2179.504
+PF-0414,Polystyrene,Titanium dioxide,2.15,201.3,18.6,49.89,87.72,2519.8
+PF-0415,Polycarbonate,Erucamide,1.69,272.9,,73.47,94.61,739.016
+PF-0416,Polyethylene,Dioctyl phthalate,,176.1,22.5,17.12,90.4,2571.582
+PF-0417,Poly(lactic acid),Dioctyl phthalate,7.32,177.0,10.1,46.8,90.88,828.608
+PF-0418,Poly(vinyl alcohol),Benzophenone,0.92,189.9,2.0,72.72,91.97,2.612
+PF-0419,Polycarbonate,Calcium carbonate,19.08,279.0,22.0,72.96,61.49,615.381
+PF-0420,Poly(lactic acid),Butylated hydroxytoluene,0.68,187.0,,53.88,89.09,459.33
+PF-0421,Poly(lactic acid),Irganox 1010,0.73,173.4,22.6,,94.07,562.554
+PF-0422,Poly(vinyl chloride),Triacetin,9.02,192.5,13.9,52.71,80.15,173.032
+PF-0423,Poly(ethylene terephthalate),Triacetin,6.86,259.9,4.4,,90.28,72.748
+PF-0424,Polypropylene,Glycerol,3.8,185.7,17.4,32.15,87.16,1785.317
+PF-0425,Poly(methyl methacrylate),Dibutyl phthalate,15.23,216.9,14.6,59.4,97.24,718.782
+PF-0426,Polycarbonate,Erucamide,0.36,269.8,19.3,70.53,93.02,1137.836
+PF-0427,Polycarbonate,Triacetin,9.57,243.1,5.2,59.63,88.67,1324.927
+PF-0428,Polyethylene,Glycerol,3.17,186.6,28.7,17.69,91.91,2276.661
+PF-0429,Poly(lactic acid),Dibutyl phthalate,14.6,189.8,,49.35,91.41,966.493
+PF-0430,Poly(ethylene terephthalate),Benzophenone,1.61,,,83.11,92.27,62.331
+PF-0431,Nylon 6,Benzophenone,1.59,250.8,9.8,79.13,85.23,30.693
+PF-0432,Poly(ethylene terephthalate),Calcium carbonate,21.53,283.8,7.4,86.46,57.21,25.899
+PF-0433,Polyethylene,Stearic acid,2.43,192.7,24.1,21.18,90.66,1963.066
+PF-0434,Poly(lactic acid),Benzophenone,2.92,185.5,28.6,58.01,91.44,587.424
+PF-0435,Poly(methyl methacrylate),Dibutyl phthalate,11.93,,27.7,60.82,92.54,546.285
+PF-0436,Polypropylene,Dibutyl phthalate,18.79,205.8,17.1,22.5,93.73,2103.552
+PF-0437,Poly(lactic acid),Dibutyl phthalate,14.27,193.4,26.5,45.19,99.0,879.425
+PF-0438,Poly(methyl methacrylate),Butylated hydroxytoluene,0.16,220.1,15.4,72.41,98.39,370.415
+PF-0439,Poly(methyl methacrylate),Acetyl tributyl citrate,4.61,201.8,13.2,63.13,90.7,325.225
+PF-0440,Polypropylene,Erucamide,0.38,186.4,21.7,36.04,90.31,1480.016
+PF-0441,Poly(vinyl chloride),Dibutyl phthalate,14.13,182.0,,48.66,82.86,160.874
+PF-0442,Polystyrene,Triacetin,10.2,233.8,10.5,44.81,93.46,2937.131
+PF-0443,Polystyrene,Acetyl tributyl citrate,20.76,218.1,15.1,40.35,,3221.109
+PF-0444,Polystyrene,Calcium carbonate,5.66,198.2,29.3,49.34,83.33,2434.938
+PF-0445,Polyethylene,Glycerol,5.88,161.5,3.0,10.42,86.11,2776.99
+PF-0446,Polyethylene,Calcium carbonate,28.23,179.4,7.1,24.9,43.01,1423.152
+PF-0447,Polystyrene,Butylated hydroxytoluene,0.61,248.3,20.2,40.84,87.62,3649.019
+PF-0448,Poly(methyl methacrylate),Dioctyl phthalate,21.28,196.5,8.6,50.15,90.48,
+PF-0449,Polystyrene,Dioctyl phthalate,19.3,223.4,4.4,35.71,93.43,4308.411
+PF-0450,Poly(vinyl chloride),Erucamide,0.49,176.8,15.8,62.51,83.54,119.319
+PF-0451,Poly(vinyl alcohol),Dibutyl phthalate,24.97,182.1,20.3,50.22,93.85,4.242
+PF-0452,Polypropylene,Irganox 1010,0.89,174.5,10.2,28.54,86.08,1628.707
+PF-0453,Polystyrene,Benzophenone,0.34,227.4,23.4,,93.01,2148.681
+PF-0454,Poly(lactic acid),Acetyl tributyl citrate,10.64,191.9,23.6,57.39,90.73,533.826
+PF-0455,Poly(lactic acid),Titanium dioxide,2.13,198.3,13.7,60.91,85.83,
+PF-0456,Poly(vinyl alcohol),2-Hydroxy-4-methoxybenzophenone,2.53,197.9,29.8,72.69,94.74,4.508
+PF-0457,Poly(methyl methacrylate),2-Hydroxy-4-methoxybenzophenone,2.3,,15.8,,95.74,573.883
+PF-0458,Polyethylene,Butylated hydroxytoluene,0.71,,23.2,22.87,90.82,1953.131
+PF-0459,Poly(lactic acid),Calcium carbonate,6.76,186.5,4.9,58.01,81.26,447.152
+PF-0460,Polypropylene,Calcium carbonate,23.1,252.9,,21.17,45.46,773.801
+PF-0461,Poly(vinyl chloride),Calcium carbonate,24.89,179.9,23.0,62.46,41.05,32.179
+PF-0462,Polystyrene,Talc,13.06,200.7,25.4,,68.67,
+PF-0463,Polyethylene,Dibutyl phthalate,20.73,177.0,14.9,,91.64,3222.37
+PF-0464,Poly(methyl methacrylate),Dibutyl phthalate,12.91,223.9,14.3,65.27,96.87,579.91
+PF-0465,Polyethylene,Stearic acid,0.87,185.3,7.2,14.42,90.08,1914.086
+PF-0466,Poly(lactic acid),Dioctyl phthalate,11.37,190.2,3.8,51.25,90.09,508.998
+PF-0467,Poly(vinyl alcohol),Dioctyl phthalate,9.95,191.7,18.3,67.98,98.52,
+PF-0468,Poly(ethylene terephthalate),Irganox 1010,0.57,262.2,27.3,84.92,92.19,30.086
+PF-0469,Poly(ethylene terephthalate),Triacetin,12.71,260.2,24.3,75.11,90.96,82.51
+PF-0470,Polyethylene,Stearic acid,2.65,186.5,2.6,16.46,89.17,1498.417
+PF-0471,Polycarbonate,Glycerol,2.11,284.0,9.0,65.34,87.28,1115.467
+PF-0472,Polycarbonate,Talc,13.95,257.9,20.1,75.79,67.19,308.61
+PF-0473,Poly(vinyl chloride),Dioctyl phthalate,28.8,188.8,5.2,30.57,81.61,303.151
+PF-0474,Nylon 6,Dibutyl phthalate,12.84,249.8,11.7,70.82,87.6,38.426
+PF-0475,Polystyrene,Talc,4.82,224.8,10.5,48.84,82.79,1512.853
+PF-0476,Polyethylene,Titanium dioxide,6.49,158.9,29.1,15.61,75.3,1507.72
+PF-0477,Polyethylene,Stearic acid,1.26,173.6,7.2,17.93,90.35,3026.158
+PF-0478,Polyethylene,Benzophenone,1.56,174.9,4.5,21.89,88.28,2043.287
+PF-0479,Polyethylene,Calcium carbonate,25.47,169.4,20.5,24.88,47.03,713.283
+PF-0480,Poly(ethylene terephthalate),Irganox 1010,0.96,270.5,,80.99,91.57,
+PF-0481,Polypropylene,Acetyl tributyl citrate,13.16,189.8,12.9,29.29,88.23,2710.777
+PF-0482,Poly(vinyl alcohol),Butylated hydroxytoluene,0.5,205.3,14.4,75.58,93.35,3.024
+PF-0483,Polypropylene,Acetyl tributyl citrate,17.55,221.2,18.1,21.04,91.41,1729.903
+PF-0484,Poly(ethylene terephthalate),2-Hydroxy-4-methoxybenzophenone,2.57,278.8,14.6,87.48,,42.318
+PF-0485,Poly(vinyl chloride),Benzophenone,1.67,180.3,7.5,,84.55,132.936
+PF-0486,Poly(lactic acid),Benzophenone,0.83,183.9,29.1,57.91,93.09,575.381
+PF-0487,Poly(vinyl chloride),Dibutyl phthalate,21.7,192.6,19.3,41.25,82.19,216.984
+PF-0488,Poly(ethylene terephthalate),Irganox 1010,0.39,273.2,27.7,83.25,88.97,54.548
+PF-0489,Polystyrene,Triacetin,8.23,191.0,,41.1,91.48,2747.695
+PF-0490,Poly(ethylene terephthalate),Calcium carbonate,17.92,266.3,5.4,80.46,62.16,22.752
+PF-0491,Polystyrene,Calcium carbonate,27.08,217.4,3.9,51.11,48.49,759.656
+PF-0492,Poly(lactic acid),Titanium dioxide,18.98,184.8,13.4,64.64,49.85,269.678
+PF-0493,Polypropylene,Stearic acid,0.55,206.8,17.2,39.9,90.91,1648.882
+PF-0494,Poly(vinyl alcohol),Butylated hydroxytoluene,0.86,201.4,,76.05,94.3,3.488
+PF-0495,Poly(ethylene terephthalate),,0.36,273.7,7.4,84.39,89.02,29.571
+PF-0496,Poly(vinyl chloride),Triacetin,15.7,195.4,4.3,42.45,80.2,263.366
+PF-0497,Poly(vinyl chloride),Butylated hydroxytoluene,0.6,168.0,27.7,53.88,81.9,64.863
+PF-0498,Poly(methyl methacrylate),Triacetin,2.1,208.8,8.0,67.31,94.6,413.878
+PF-0499,Polycarbonate,2-Hydroxy-4-methoxybenzophenone,2.44,258.5,4.0,60.89,89.6,792.125
+PF-0500,Nylon 6,2-Hydroxy-4-methoxybenzophenone,2.88,230.1,26.2,74.3,84.19,47.463
