@@ -23,3 +23,7 @@ Benzophenone,uv_absorber,O=C(c1ccccc1)c1ccccc1,
 2-Hydroxy-4-methoxybenzophenone,uv_absorber,COc1ccc(C(=O)c2ccccc2)c(O)c1,oxybenzone / BP-3
 Stearic acid,lubricant,CCCCCCCCCCCCCCCCCC(=O)O,
 Erucamide,lubricant,CCCCCCCCC=CCCCCCCCCCCCC(N)=O,(Z)-docos-13-enamide
+Maleic anhydride,compatibilizer,O=C1OC(=O)C=C1,second additive (compatibilizer)
+Sorbitol,clarifier,OCC(O)C(O)C(O)C(O)CO,second additive (nucleating/clarifying agent)
+Pentaerythritol,clarifier,OCC(CO)(CO)CO,second additive
+Zinc stearate,lubricant,[Zn+2].CCCCCCCCCCCCCCCCCC(=O)[O-].CCCCCCCCCCCCCCCCCC(=O)[O-],second additive (inorganic salt)
