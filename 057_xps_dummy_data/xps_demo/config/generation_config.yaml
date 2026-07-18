@@ -1,0 +1,125 @@
+# =============================================================================
+# PET フィルム C1s XPS ダミーデータ生成設定
+# =============================================================================
+# 社内講習会「生成AIを使ったMI」デモ3向け。
+# 生成条件をコードに直接埋め込まず、この設定ファイルとして分離する。
+# すべての乱数は random_seed によって完全に再現できる。
+# =============================================================================
+
+random_seed: 202607
+n_samples: 50
+
+# --- 測定領域（結合エネルギー軸） -------------------------------------------
+# XPS 表示に合わせ、高結合エネルギー -> 低結合エネルギーの降順で保存する。
+energy:
+  start_eV: 292.0   # 走査開始（高結合エネルギー側）
+  stop_eV: 282.0    # 走査終了（低結合エネルギー側）
+  step_eV: -0.05    # データ間隔（負 = 降順）
+  n_points: 201     # データ点数
+
+# --- ピーク成分（C1s の 3 成分） --------------------------------------------
+# center_eV は基準ピーク位置。試料ごとに小さく変動させる。
+peaks:
+  - name: C-C_C-H     # C-C / C-H
+    center_eV: 284.8
+    assignment: "C-C / C-H"
+  - name: C-O         # C-O
+    center_eV: 286.3
+    assignment: "C-O"
+  - name: O-C=O       # O-C=O (エステル / カルボキシル)
+    center_eV: 288.7
+    assignment: "O-C=O"
+
+# --- ピーク位置ゆらぎ・形状パラメータの生成範囲 -----------------------------
+peak_shape:
+  center_jitter_eV: [0.05, 0.10]   # 基準値からの位置ゆらぎ（±）の標準偏差レンジ
+  fwhm_eV: [0.9, 1.6]              # FWHM の生成範囲
+  eta: [0.2, 0.5]                  # Lorentzian 混合率（pseudo-Voigt の eta）
+  fwhm_correlation: 0.6            # 同一試料内で 3 ピークの幅にもたせる弱い相関
+
+# --- 全ピーク面積（試料ごとの総強度スケール） -------------------------------
+total_area:
+  base: 90000.0        # 基準となる総ピーク面積（任意単位）
+  variation_frac: 0.18 # 試料ごとに ±15〜20% 変動（標準偏差 ~18%）
+
+# --- 表面処理条件（5 群 × 各 10 反復） --------------------------------------
+# 処理が強くなるほど Peak1(C-C/C-H) が減り Peak2(C-O)/Peak3(O-C=O) が増える。
+treatment_groups:
+  - group: G1
+    treatment: untreated
+    power_W: 0
+    time_s: 0
+    n_replicates: 10
+    area_fraction_center: [0.64, 0.25, 0.11]   # [C-C/C-H, C-O, O-C=O]
+  - group: G2
+    treatment: O2_plasma
+    power_W: 50
+    time_s: 10
+    n_replicates: 10
+    area_fraction_center: [0.59, 0.27, 0.14]
+  - group: G3
+    treatment: O2_plasma
+    power_W: 100
+    time_s: 30
+    n_replicates: 10
+    area_fraction_center: [0.54, 0.29, 0.17]
+  - group: G4
+    treatment: O2_plasma
+    power_W: 150
+    time_s: 60
+    n_replicates: 10
+    area_fraction_center: [0.49, 0.31, 0.20]
+  - group: G5
+    treatment: O2_plasma
+    power_W: 200
+    time_s: 120
+    n_replicates: 10
+    area_fraction_center: [0.45, 0.32, 0.23]
+
+# 面積比に加えるランダムばらつき（Dirichlet 濃度。大きいほど中心値に近い）
+area_fraction_concentration: 120.0
+
+# --- 帯電によるエネルギーシフト --------------------------------------------
+charging_shift:
+  normal_sigma_eV: 0.07          # 通常試料の共通シフト（平均 0）
+  anomaly_shift_eV: [0.20, 0.30] # 大きな帯電シフト異常時の絶対値レンジ
+
+# --- バックグラウンド ------------------------------------------------------
+background:
+  offset: [300.0, 800.0]          # 定数オフセットの生成レンジ
+  linear_slope: [-8.0, 8.0]       # 一次傾斜 [/eV] の生成レンジ
+  shirley_ratio: [0.03, 0.06]     # Shirley 型背景の強度係数
+  quadratic: [-0.5, 0.5]          # ごく弱い二次曲線成分の係数
+
+# --- ノイズ ----------------------------------------------------------------
+noise:
+  count_scale: [0.8, 1.6]   # 強度依存（カウント）ノイズのスケール（sqrt(I) に対する係数）
+  gaussian_sigma: [8.0, 25.0]  # 強度非依存の Gaussian ノイズ標準偏差
+
+# --- 意図的な異常データ ----------------------------------------------------
+# 試料番号（1-based）を固定し、再現可能にする。
+anomalies:
+  - sample_index: 7
+    type: high_noise
+    description: "noise level increased to ~3x normal"
+  - sample_index: 18
+    type: spike
+    description: "three artificial spike outliers"
+  - sample_index: 26
+    type: low_signal
+    description: "overall intensity reduced to ~30% of normal"
+  - sample_index: 33
+    type: charging_shift
+    description: "large charging shift of ~0.3 eV"
+  - sample_index: 44
+    type: unmodeled_shoulder
+    description: "weak 4th component near 285.5 eV (not in 3-peak model)"
+
+anomaly_params:
+  high_noise_factor: 3.0
+  spike_count: 3
+  spike_amplitude: [1500.0, 3000.0]
+  low_signal_factor: 0.30
+  shoulder_center_eV: 285.5
+  shoulder_area_frac: 0.08   # 全ピーク面積に対する第4成分の比率
+  shoulder_fwhm_eV: 1.3
