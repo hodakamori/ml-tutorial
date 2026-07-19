@@ -66,13 +66,19 @@ def shirley_like_background(energy: np.ndarray, peak_signal: np.ndarray,
 
     低結合エネルギー側ほど背景が高くなる（光電子の非弾性散乱による）挙動を、
     ピーク信号の累積積分で近似する。energy は降順（高 -> 低）で渡される想定。
+
+    ステップの高さは「ピーク最大高さ × ratio」とする。累積和そのものを使うと
+    段差がピーク面積のオーダー（= 面積/刻み幅）になり、低 BE 側が非物理的に
+    持ち上がってしまうため、0->1 に正規化した累積割合でスケールする。
     """
     # 高結合エネルギー側からの累積和（降順配列なので index 増加 = 低 BE 方向）
     cumulative = np.cumsum(peak_signal)
     total = cumulative[-1]
-    if total <= 0:
+    peak_max = peak_signal.max()
+    if total <= 0 or peak_max <= 0:
         return np.zeros_like(energy)
-    return ratio * total * (cumulative / total)
+    step_height = ratio * peak_max
+    return step_height * (cumulative / total)
 
 
 # ---------------------------------------------------------------------------
